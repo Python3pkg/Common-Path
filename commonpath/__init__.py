@@ -109,7 +109,7 @@ class CommonPath(object):
         # e.g. [('', 3),
         #       ('/home', 2),
         #       ('/home/user1', 2)]
-        return [Counter(level).most_common(1)[0] for level in levels.values()]
+        return [Counter(level).most_common(1)[0] for level in list(levels.values())]
 
     def natural(self, max_depth=None):
         """Return the "natural" deepest common path."""
